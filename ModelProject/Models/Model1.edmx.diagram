@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8fca7c77e1564b3ab7390ac8710581c0" Name="Diagram1">
+        <EntityTypeShape EntityType="P112CinemaModel.Country" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="P112CinemaModel.Director" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="P112CinemaModel.MovieCountry" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="P112CinemaModel.Movy" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="P112CinemaModel.FK_MovieCountries_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="P112CinemaModel.FK_Movies_Directors" ManuallyRouted="false" />
+        <AssociationConnector Association="P112CinemaModel.FK_MovieCountries_Movies" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

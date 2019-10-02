@@ -1,0 +1,38 @@
+﻿@model List<CourseProject.Models.Student>
+
+@{
+    ViewBag.Title = "Students";
+}
+
+
+@if (Model == null)
+{
+    <div class="alert alert-danger">Tələbə tapılmadı</div>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Qrup</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Firstname</td>
+                    <td>@item.Lastname</td>
+                    <td>@item.Group.Name</td>
+                    <td>
+                        <a href="@Url.Action("Details", "Students", new { Id = item.Id})">ətraflı</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}

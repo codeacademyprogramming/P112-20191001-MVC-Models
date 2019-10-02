@@ -1,0 +1,36 @@
+﻿@model ModelProject.Models.MoviesIndexViewModel
+@{
+    ViewBag.Title = "Movies Index";
+}
+
+<h2>@ViewBag.TableTitle</h2>
+
+<p>@ViewData["tema1"]</p>
+<p>@ViewData["tema2"]</p>
+
+
+<div class="alert alert-info">@Model.Student.Name @Model.Student.Lastname</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Adı</th>
+            <th>Buraxılış ili</th>
+            <th>Rejissor</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model.Movies)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.ReleaseYear</td>
+                <td>@(item.Director.Firstname + " " + item.Director.Lastname)</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
